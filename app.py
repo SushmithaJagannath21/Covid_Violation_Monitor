@@ -295,31 +295,13 @@ def get_table_download_link2(df):
     href = f'<a href="data:file/csv;base64,{b64}" download="summary.csv">Download No-mask Identities</a>'
     return href
 
-@st.cache(allow_output_mutation=True, max_entries=2, ttl=60)
-def download_wget():
-    path1 = './my_model.h5'
-    path2 = './yolov3.weights'
-    if not os.path.exists(path1):    
-            model_url = 'wget -O my_model1.h5 https://www.dropbox.com/s/7meuxh8a6iul0e0/my_model1.h5'
-
-            with st.spinner('done!\nmodel was not found, downloading them...'):
-               os.system(model_url)
-    else:
-        print("Model is here.")
-
-    if not os.path.exists(path2):    
-            yolo_url = 'wget -O yolov3.weights https://www.dropbox.com/s/oeu6m85ahsw22ci/yolov3.weights'
-            with st.spinner('Downloading yolo weights'):
-               os.system(yolo_url)
-    else:
-        print("yolo is here.")
          
         
 def main():
     """COVID-19 Violator App"""
     original_title = '<p style=" font-type:bold; color:#faca2b; font-size: 36px;">COVID-19 VIOLATION MONITOR</p>'
     st.markdown(original_title, unsafe_allow_html=True)
-    download_wget()
+    #download_wget()
     #model_path='my_model1.h5'
     #model = torch.load(model_path)
     #weights_path='./yolov3.weights'
