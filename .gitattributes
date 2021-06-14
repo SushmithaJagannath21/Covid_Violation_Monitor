@@ -3,3 +3,6 @@
 detector.pickle filter=lfs diff=lfs merge=lfs -text
 yolov3.weights filter=lfs diff=lfs merge=lfs -text
 my_model1.h5 filter=lfs diff=lfs merge=lfs -text
+*mymodel1.h5 filter=lfs diff=lfs merge=lfs -text
+*yolov3.weights filter=lfs diff=lfs merge=lfs -text
+mymodel1.h5 filter=lfs diff=lfs merge=lfs -text
