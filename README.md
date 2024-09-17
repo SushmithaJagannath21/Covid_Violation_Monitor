@@ -30,3 +30,28 @@ The **Covid Violation Monitor** is a Python-based system designed to detect and 
 ├── packages.txt                     # List of packages and dependencies
 ├── yolov3.cfg                       # YOLOv3 configuration file for object detection
 └── yolov3.weights                   # YOLOv3 weights file for object detection
+
+Installation
+Clone the repository:
+git clone https://github.com/SushmithaJagannath21/Covid_Violation_Monitor.git
+
+Navigate to the project directory:
+cd Covid_Violation_Monitor
+
+Create a virtual environment and install the dependencies:
+conda env create -f environment.yml
+conda activate covid_violation_monitor
+
+Run the Streamlit application:
+streamlit run app.py
+
+Usage
+Ensure that your camera feed or video input is connected.
+Launch the Streamlit app using the command above.
+The web interface will display the video feed with real-time monitoring of social distancing and face mask violations.
+Violations will be visually highlighted on the video feed.
+
+Results
+Accuracy: The system achieves an accuracy of 92.2% for mask detection and 95% accuracy for facial recognition using pre-trained models.
+Real-Time Performance: Processes up to 60 frames per second (FPS), ensuring efficient monitoring for real-time applications.
+
